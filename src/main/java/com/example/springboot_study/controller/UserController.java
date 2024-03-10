@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     private final UserServiceImpl userService;
-    @PostMapping(value = "/saveUser")
+    @PostMapping(value = "/api/saveUser")
     public Long saveUser(@RequestBody UserDTO userDto){
         return userService.save(userDto);
     }

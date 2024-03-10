@@ -16,6 +16,7 @@ public class UserServiceImpl implements UserService{
     @Transactional
     public Long save(UserDTO userDto) {
         UserEntity entity = dtoToEntity(userDto);
+        userRepository.save(entity);
         return entity.getId();
     }
 }

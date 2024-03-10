@@ -5,7 +5,7 @@ import com.example.springboot_study.entity.UserEntity;
 
 public interface UserService {
 
-
+    Long save(UserDTO dto);
     default UserEntity dtoToEntity(UserDTO dto){
         UserEntity entity = UserEntity.builder()
                 .name(dto.getName())
