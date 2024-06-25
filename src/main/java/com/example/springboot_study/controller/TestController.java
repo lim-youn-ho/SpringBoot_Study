@@ -1,23 +1,26 @@
 package com.example.springboot_study.controller;
 
+import com.example.springboot_study.service.TestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.lang.reflect.Member;
+import java.util.List;
 
 @RestController
 public class TestController {
 
-    //java17에서 변한점
-    record Item(String name, int price){
-        //이렇게 record 설정해 두면 private final 로 정의됨
-    }
-    Item juice = new Item("juice",3000);
+   @Autowired
+    TestService testService;
 
     @GetMapping("/test")
-    public Integer test(){
+    public List<Member> test(){
+
+    List<Member> members = testService.getAllMembers();
 
 
-
-        return juice.price(); //3000 리턴
+        return members;
 
     }
 
