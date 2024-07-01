@@ -31,6 +31,6 @@ public class JUnitCycleTest {
 
     @AfterEach //테스트 케이스를 종료하기 전마다 실행
     public void afterEach(){
-        System.out.println("@AfterAll");
+        System.out.println("@AfterEach");
     }
 }
