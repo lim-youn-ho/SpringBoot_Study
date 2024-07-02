@@ -1,4 +1,9 @@
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/sys?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: root
   jpa:
     # 전송 쿼리 확인용
     show-sql: true
