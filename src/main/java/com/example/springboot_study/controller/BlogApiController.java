@@ -3,6 +3,7 @@ package com.example.springboot_study.controller;
 import com.example.springboot_study.domain.Article;
 import com.example.springboot_study.dto.AddArticleRequest;
 import com.example.springboot_study.dto.ArticleResponse;
+import com.example.springboot_study.dto.UpdateArticleRequest;
 import com.example.springboot_study.service.BlogService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -53,6 +54,24 @@ public class BlogApiController {
         //특정 글만 조회해오기
         return ResponseEntity.ok()
                 .body(new ArticleResponse(article));
+
+    }
+
+    @DeleteMapping("/api/delArticles/{id}")
+    public ResponseEntity<Void> deleteArticle(@PathVariable long id){
+        blogService.delete(id);
+
+        return ResponseEntity.ok()
+                .build();
+
+    }
+
+    @PutMapping("/api/updArticles/{id}")
+    public ResponseEntity<Article> updateArticle(@PathVariable long id, @RequestBody UpdateArticleRequest request){
+        Article updateArticle = blogService.update(id,request);
+
+        return ResponseEntity.ok()
+                .body(updateArticle);
 
     }
 
