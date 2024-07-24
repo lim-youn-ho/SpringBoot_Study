@@ -65,7 +65,7 @@ public class BlogApiController {
                 .build();
 
     }
-
+    //특정 글 수정
     @PutMapping("/api/updArticles/{id}")
     public ResponseEntity<Article> updateArticle(@PathVariable long id, @RequestBody UpdateArticleRequest request){
         Article updateArticle = blogService.update(id,request);
