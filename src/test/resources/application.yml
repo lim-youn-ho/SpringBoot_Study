@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3308/sys?serverTimezone=UTC&characterEncoding=UTF-8
+    username:  # id
+    password:  # password
+  jpa:
+    # 전송 쿼리 확인용
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        hbm2ddl:
+          auto: create
+
+    # 테이블 생성 후에 data.sql 실행
+    defer-datasource-initialization: true
