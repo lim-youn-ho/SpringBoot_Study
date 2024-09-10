@@ -7,7 +7,7 @@ import java.util.List;
 
 public class HanbillApiService {
     private  final BlogRepository blogRepository;
-
+    //repository 부분 수정
     public HanbillApiService(BlogRepository blogRepository) {
         this.blogRepository = blogRepository;
     }
