@@ -2,17 +2,18 @@ package com.example.springboot_study.service;
 
 import com.example.springboot_study.domain.Article;
 import com.example.springboot_study.repository.BlogRepository;
+import com.example.springboot_study.repository.HanbillRepository;
 
 import java.util.List;
 
 public class HanbillApiService {
-    private  final BlogRepository blogRepository;
+    private  final HanbillRepository hanbillRepository;
     //repository 부분 수정
-    public HanbillApiService(BlogRepository blogRepository) {
-        this.blogRepository = blogRepository;
+    public HanbillApiService(HanbillRepository hanbillRepository) {
+        this.hanbillRepository = hanbillRepository;
     }
 
     public List<Article> findAll(){
-        return blogRepository.findAll();
+        return null;
     }
 }
