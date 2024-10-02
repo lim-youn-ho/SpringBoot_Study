@@ -1,7 +1,6 @@
 package com.example.springboot_study.service;
 
 import com.example.springboot_study.domain.Article;
-import com.example.springboot_study.repository.BlogRepository;
 import com.example.springboot_study.repository.HanbillRepository;
 
 import java.util.List;
