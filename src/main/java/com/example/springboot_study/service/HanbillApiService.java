@@ -7,7 +7,7 @@ import java.util.List;
 
 public class HanbillApiService {
     private  final HanbillRepository hanbillRepository;
-    //repository 부분 수정
+
     public HanbillApiService(HanbillRepository hanbillRepository) {
         this.hanbillRepository = hanbillRepository;
     }
