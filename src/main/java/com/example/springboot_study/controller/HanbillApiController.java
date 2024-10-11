@@ -9,6 +9,8 @@ import java.util.List;
 
 public class HanbillApiController {
     HanbillApiService hanbillApiService;
+    
+    //화면단 구축 필요
     @GetMapping("/api/getArticles")
     public ResponseEntity<List<ArticleResponse>> findAllArticles(){
 
